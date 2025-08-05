@@ -13,6 +13,7 @@ class Video extends Model
         'genre' ,
         'age_rating' ,
         'file_path',
+        'user_id'
     ];
     public function likes()
 {

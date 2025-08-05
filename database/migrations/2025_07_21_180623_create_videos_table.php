@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('genre');
             $table->string('age_rating');
             $table->string('file_path');
+             $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });
     }

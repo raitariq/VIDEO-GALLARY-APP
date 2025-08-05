@@ -54,6 +54,7 @@ class VideoController extends Controller
             'genre' => $request->genre,
             'age_rating' => $request->age_rating,
             'file_path' => $path,
+            'user_id' => auth()->user()->id
         ]);
     
         return redirect()->route('video.index')->with('success', 'Video uploaded successfully.');
@@ -126,7 +127,7 @@ class VideoController extends Controller
         } 
     }
     public function datatable(){
-        $videos = Video::latest()->get();
+        $videos = Video::query()->where('user_id',auth()->user()->id)->latest()->get();
         return Datatables::of($videos)
             ->addColumn('date', function ($videos) {
                 return Carbon::parse($videos->created_at)->format('d M Y');

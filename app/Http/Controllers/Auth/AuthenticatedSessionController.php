@@ -28,11 +28,11 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerate();
         if(auth()->user()->user_type == 'admin'){
-            return redirect()->intended(route('users.index'));
+            return redirect()->route('users.index');
         }elseif(auth()->user()->user_type == 'creator'){
-            return redirect()->intended(route('video.index'));
+            return redirect()->route('video.index');
         }else{
-            return redirect()->intended(route('user-videos'));
+            return redirect()->route('user-videos');
         }
 
         

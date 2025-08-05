@@ -69,11 +69,6 @@
                 @enderror
             </div>
 
-            <div class="mb-3 form-check">
-                <input type="checkbox" name="remember" class="form-check-input" id="remember">
-                <label class="form-check-label" for="remember">Remember me</label>
-            </div>
-
             <button type="submit" class="btn btn-primary w-100">Login</button>
 
             <div class="mt-3 text-center">

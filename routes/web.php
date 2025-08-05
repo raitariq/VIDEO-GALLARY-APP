@@ -27,9 +27,7 @@ Route::middleware('auth')->group(function () {
         Route::put('change-user-status',[UserController::class,'changeStatus'])->name('change-user-status');
     });
     
-    // Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    // Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    // Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+   
 });
 
 
